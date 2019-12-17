@@ -43,6 +43,9 @@
 	 * entry:
 	 *	r1 = v:p offset
 	 */
+#ifdef   CONFIG_ARM_TRUSTZONE
+          .arch_extension sec
+#endif
 
 ENTRY(exynos4_enter_lp)
 	stmfd	sp!, { r3 - r12, lr }

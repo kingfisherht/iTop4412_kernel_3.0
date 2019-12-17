@@ -39,6 +39,10 @@
 	 * entry:
 	 *	r1 = v:p offset
 	 */
+#ifdef   CONFIG_ARM_TRUSTZONE
+          .arch_extension sec
+#endif
+
 
 ENTRY(s3c_cpu_save)
 
